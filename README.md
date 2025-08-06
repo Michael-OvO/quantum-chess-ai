@@ -71,21 +71,20 @@ quantum chess
 
 ```bash
 ## for development
-micromamba create -y -n env-qchess
-micromamba install -y -n env-qchess cython ipython pytest "numpy<2.0" matplotlib pylint scipy tqdm pygame
+# 创建名为 env-qchess 的环境
+conda create -y -n qchess
+
+# 激活环境
+conda activate qchess
+
+# 安装软件包（不含 gymnasium）
+conda install -y cython ipython pytest "numpy<2.0" matplotlib pylint scipy tqdm
+
+pip install pygame
 pip install gymnasium==1.0.0a2
 
-## for production, pygame is optional (if you want to use GUI)
-micromamba create -y -n env-qchess
-micromamba install -y -n env-qchess pytest "numpy<2.0"
-# micromamba install -y -n env-qchess pytest "numpy<2.0" pygame
-
-## deprecated environment
-# micromamba create -y -n env-cirq
-# micromamba install -y -n env-cirq cython ipython pytest matplotlib h5py pandas pylint jupyterlab pillow protobuf scipy requests tqdm lxml opt_einsum
-# micromamba activate env-cirq
-# pip install cirq #conda-forge/macOS/pytorch is broken
-# pip install git+https://github.com/quantumlib/unitary
+# 安装qchess
+pip install .
 ```
 
 ```text
