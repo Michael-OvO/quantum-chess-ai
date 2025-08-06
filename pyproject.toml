@@ -1,0 +1,27 @@
+[project]
+name = "qchess"
+version = "0.0.1"
+readme = "README.md"
+dependencies = [
+    'numpy',
+]
+
+[project.optional-dependencies]
+dev = [
+    "pygame",
+]
+
+[tool.setuptools.packages.find]
+where = ["python"]
+
+[tool.setuptools.package-data]
+qchess = ["consola.ttf", 'pictures/*'] #"*.rst"
+
+[build-system]
+requires = ["setuptools", "wheel", "toml", "numpy"]
+build-backend = "setuptools.build_meta"
+
+
+[project.scripts]
+qchess = "qchess:_run_terminal"
+qchess-gui = "qchess:_run_gui"

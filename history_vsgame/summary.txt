@@ -1,0 +1,400 @@
+Idx: 1, White AI: v1, Black AI: v0
+Idx: 1, Game Steps: 42, Winner: black, AI: v0
+Idx: 1, White: 0, Black: 1, Draw: 0, Continue: 0, v1: 0, v0: 1, NA: 0, Error: 0
+
+Idx: 2, White AI: v0, Black AI: v1
+Idx: 2, Game Steps: 11, Winner: white, AI: v0
+Idx: 2, White: 1, Black: 1, Draw: 0, Continue: 0, v1: 0, v0: 2, NA: 0, Error: 0
+
+Idx: 3, White AI: v1, Black AI: v0
+Idx: 3, Game Steps: 14, Winner: black, AI: v0
+Idx: 3, White: 1, Black: 2, Draw: 0, Continue: 0, v1: 0, v0: 3, NA: 0, Error: 0
+
+Idx: 4, White AI: v0, Black AI: v1
+Idx: 4, Game Steps: 36, Winner: black, AI: v1
+Idx: 4, White: 1, Black: 3, Draw: 0, Continue: 0, v1: 1, v0: 3, NA: 0, Error: 0
+
+Idx: 5, White AI: v1, Black AI: v0
+Idx: 5, Game Steps: 82, Winner: black, AI: v0
+Idx: 5, White: 1, Black: 4, Draw: 0, Continue: 0, v1: 1, v0: 4, NA: 0, Error: 0
+
+Idx: 6, White AI: v0, Black AI: v1
+Idx: 6, Game Steps: 41, Winner: white, AI: v0
+Idx: 6, White: 2, Black: 4, Draw: 0, Continue: 0, v1: 1, v0: 5, NA: 0, Error: 0
+
+Idx: 7, White AI: v1, Black AI: v0
+Idx: 7, Game Steps: 74, Winner: black, AI: v0
+Idx: 7, White: 2, Black: 5, Draw: 0, Continue: 0, v1: 1, v0: 6, NA: 0, Error: 0
+
+Idx: 8, White AI: v0, Black AI: v1
+Idx: 8, Game Steps: 92, Winner: error, AI: NA
+Idx: 8, White: 2, Black: 5, Draw: 0, Continue: 0, v1: 1, v0: 6, NA: 1, Error: 1
+
+Idx: 9, White AI: v1, Black AI: v0
+Idx: 9, Game Steps: 16, Winner: black, AI: v0
+Idx: 9, White: 2, Black: 6, Draw: 0, Continue: 0, v1: 1, v0: 7, NA: 1, Error: 1
+
+Idx: 10, White AI: v0, Black AI: v1
+Idx: 10, Game Steps: 47, Winner: white, AI: v0
+Idx: 10, White: 3, Black: 6, Draw: 0, Continue: 0, v1: 1, v0: 8, NA: 1, Error: 1
+
+Idx: 11, White AI: v1, Black AI: v0
+Idx: 11, Game Steps: 34, Winner: black, AI: v0
+Idx: 11, White: 3, Black: 7, Draw: 0, Continue: 0, v1: 1, v0: 9, NA: 1, Error: 1
+
+Idx: 12, White AI: v0, Black AI: v1
+Idx: 12, Game Steps: 15, Winner: white, AI: v0
+Idx: 12, White: 4, Black: 7, Draw: 0, Continue: 0, v1: 1, v0: 10, NA: 1, Error: 1
+
+Idx: 13, White AI: v1, Black AI: v0
+Idx: 13, Game Steps: 16, Winner: black, AI: v0
+Idx: 13, White: 4, Black: 8, Draw: 0, Continue: 0, v1: 1, v0: 11, NA: 1, Error: 1
+
+Idx: 14, White AI: v0, Black AI: v1
+Idx: 14, Game Steps: 73, Winner: white, AI: v0
+Idx: 14, White: 5, Black: 8, Draw: 0, Continue: 0, v1: 1, v0: 12, NA: 1, Error: 1
+
+Idx: 15, White AI: v1, Black AI: v0
+Idx: 15, Game Steps: 42, Winner: black, AI: v0
+Idx: 15, White: 5, Black: 9, Draw: 0, Continue: 0, v1: 1, v0: 13, NA: 1, Error: 1
+
+Idx: 16, White AI: v0, Black AI: v1
+Idx: 16, Game Steps: 107, Winner: white, AI: v0
+Idx: 16, White: 6, Black: 9, Draw: 0, Continue: 0, v1: 1, v0: 14, NA: 1, Error: 1
+
+Idx: 17, White AI: v1, Black AI: v0
+Idx: 17, Game Steps: 52, Winner: black, AI: v0
+Idx: 17, White: 6, Black: 10, Draw: 0, Continue: 0, v1: 1, v0: 15, NA: 1, Error: 1
+
+Idx: 18, White AI: v0, Black AI: v1
+Idx: 18, Game Steps: 87, Winner: white, AI: v0
+Idx: 18, White: 7, Black: 10, Draw: 0, Continue: 0, v1: 1, v0: 16, NA: 1, Error: 1
+
+Idx: 19, White AI: v1, Black AI: v0
+Idx: 19, Game Steps: 40, Winner: black, AI: v0
+Idx: 19, White: 7, Black: 11, Draw: 0, Continue: 0, v1: 1, v0: 17, NA: 1, Error: 1
+
+Idx: 20, White AI: v0, Black AI: v1
+Idx: 20, Game Steps: 27, Winner: white, AI: v0
+Idx: 20, White: 8, Black: 11, Draw: 0, Continue: 0, v1: 1, v0: 18, NA: 1, Error: 1
+
+Idx: 21, White AI: v1, Black AI: v0
+Idx: 21, Game Steps: 20, Winner: black, AI: v0
+Idx: 21, White: 8, Black: 12, Draw: 0, Continue: 0, v1: 1, v0: 19, NA: 1, Error: 1
+
+Idx: 22, White AI: v0, Black AI: v1
+Idx: 22, Game Steps: 71, Winner: white, AI: v0
+Idx: 22, White: 9, Black: 12, Draw: 0, Continue: 0, v1: 1, v0: 20, NA: 1, Error: 1
+
+Idx: 23, White AI: v1, Black AI: v0
+Idx: 23, Game Steps: 31, Winner: white, AI: v1
+Idx: 23, White: 10, Black: 12, Draw: 0, Continue: 0, v1: 2, v0: 20, NA: 1, Error: 1
+
+Idx: 24, White AI: v0, Black AI: v1
+Idx: 24, Game Steps: 40, Winner: black, AI: v1
+Idx: 24, White: 10, Black: 13, Draw: 0, Continue: 0, v1: 3, v0: 20, NA: 1, Error: 1
+
+Idx: 25, White AI: v1, Black AI: v0
+Idx: 25, Game Steps: 29, Winner: white, AI: v1
+Idx: 25, White: 11, Black: 13, Draw: 0, Continue: 0, v1: 4, v0: 20, NA: 1, Error: 1
+
+Idx: 26, White AI: v0, Black AI: v1
+Idx: 26, Game Steps: 61, Winner: black, AI: v1
+Idx: 26, White: 11, Black: 14, Draw: 0, Continue: 0, v1: 5, v0: 20, NA: 1, Error: 1
+
+Idx: 27, White AI: v1, Black AI: v0
+Idx: 27, Game Steps: 73, Winner: black, AI: v0
+Idx: 27, White: 11, Black: 15, Draw: 0, Continue: 0, v1: 5, v0: 21, NA: 1, Error: 1
+
+Idx: 28, White AI: v0, Black AI: v1
+Idx: 28, Game Steps: 15, Winner: white, AI: v0
+Idx: 28, White: 12, Black: 15, Draw: 0, Continue: 0, v1: 5, v0: 22, NA: 1, Error: 1
+
+Idx: 29, White AI: v1, Black AI: v0
+Idx: 29, Game Steps: 22, Winner: black, AI: v0
+Idx: 29, White: 12, Black: 16, Draw: 0, Continue: 0, v1: 5, v0: 23, NA: 1, Error: 1
+
+Idx: 30, White AI: v0, Black AI: v1
+Idx: 30, Game Steps: 90, Winner: black, AI: v1
+Idx: 30, White: 12, Black: 17, Draw: 0, Continue: 0, v1: 6, v0: 23, NA: 1, Error: 1
+
+Idx: 31, White AI: v1, Black AI: v0
+Idx: 31, Game Steps: 70, Winner: black, AI: v0
+Idx: 31, White: 12, Black: 18, Draw: 0, Continue: 0, v1: 6, v0: 24, NA: 1, Error: 1
+
+Idx: 32, White AI: v0, Black AI: v1
+Idx: 32, Game Steps: 51, Winner: white, AI: v0
+Idx: 32, White: 13, Black: 18, Draw: 0, Continue: 0, v1: 6, v0: 25, NA: 1, Error: 1
+
+Idx: 33, White AI: v1, Black AI: v0
+Idx: 33, Game Steps: 24, Winner: black, AI: v0
+Idx: 33, White: 13, Black: 19, Draw: 0, Continue: 0, v1: 6, v0: 26, NA: 1, Error: 1
+
+Idx: 34, White AI: v0, Black AI: v1
+Idx: 34, Game Steps: 17, Winner: white, AI: v0
+Idx: 34, White: 14, Black: 19, Draw: 0, Continue: 0, v1: 6, v0: 27, NA: 1, Error: 1
+
+Idx: 35, White AI: v1, Black AI: v0
+Idx: 35, Game Steps: 32, Winner: black, AI: v0
+Idx: 35, White: 14, Black: 20, Draw: 0, Continue: 0, v1: 6, v0: 28, NA: 1, Error: 1
+
+Idx: 36, White AI: v0, Black AI: v1
+Idx: 36, Game Steps: 22, Winner: black, AI: v1
+Idx: 36, White: 14, Black: 21, Draw: 0, Continue: 0, v1: 7, v0: 28, NA: 1, Error: 1
+
+Idx: 37, White AI: v1, Black AI: v0
+Idx: 37, Game Steps: 36, Winner: black, AI: v0
+Idx: 37, White: 14, Black: 22, Draw: 0, Continue: 0, v1: 7, v0: 29, NA: 1, Error: 1
+
+Idx: 38, White AI: v0, Black AI: v1
+Idx: 38, Game Steps: 65, Winner: white, AI: v0
+Idx: 38, White: 15, Black: 22, Draw: 0, Continue: 0, v1: 7, v0: 30, NA: 1, Error: 1
+
+Idx: 39, White AI: v1, Black AI: v0
+Idx: 39, Game Steps: 29, Winner: white, AI: v1
+Idx: 39, White: 16, Black: 22, Draw: 0, Continue: 0, v1: 8, v0: 30, NA: 1, Error: 1
+
+Idx: 40, White AI: v0, Black AI: v1
+Idx: 40, Game Steps: 39, Winner: white, AI: v0
+Idx: 40, White: 17, Black: 22, Draw: 0, Continue: 0, v1: 8, v0: 31, NA: 1, Error: 1
+
+Idx: 41, White AI: v1, Black AI: v0
+Idx: 41, Game Steps: 35, Winner: white, AI: v1
+Idx: 41, White: 18, Black: 22, Draw: 0, Continue: 0, v1: 9, v0: 31, NA: 1, Error: 1
+
+Idx: 42, White AI: v0, Black AI: v1
+Idx: 42, Game Steps: 41, Winner: error, AI: NA
+Idx: 42, White: 18, Black: 22, Draw: 0, Continue: 0, v1: 9, v0: 31, NA: 2, Error: 2
+
+Idx: 43, White AI: v1, Black AI: v0
+Idx: 43, Game Steps: 49, Winner: white, AI: v1
+Idx: 43, White: 19, Black: 22, Draw: 0, Continue: 0, v1: 10, v0: 31, NA: 2, Error: 2
+
+Idx: 44, White AI: v0, Black AI: v1
+Idx: 44, Game Steps: 68, Winner: black, AI: v1
+Idx: 44, White: 19, Black: 23, Draw: 0, Continue: 0, v1: 11, v0: 31, NA: 2, Error: 2
+
+Idx: 45, White AI: v1, Black AI: v0
+Idx: 45, Game Steps: 50, Winner: black, AI: v0
+Idx: 45, White: 19, Black: 24, Draw: 0, Continue: 0, v1: 11, v0: 32, NA: 2, Error: 2
+
+Idx: 46, White AI: v0, Black AI: v1
+Idx: 46, Game Steps: 55, Winner: white, AI: v0
+Idx: 46, White: 20, Black: 24, Draw: 0, Continue: 0, v1: 11, v0: 33, NA: 2, Error: 2
+
+Idx: 47, White AI: v1, Black AI: v0
+Idx: 47, Game Steps: 32, Winner: black, AI: v0
+Idx: 47, White: 20, Black: 25, Draw: 0, Continue: 0, v1: 11, v0: 34, NA: 2, Error: 2
+
+Idx: 48, White AI: v0, Black AI: v1
+Idx: 48, Game Steps: 41, Winner: white, AI: v0
+Idx: 48, White: 21, Black: 25, Draw: 0, Continue: 0, v1: 11, v0: 35, NA: 2, Error: 2
+
+Idx: 49, White AI: v1, Black AI: v0
+Idx: 49, Game Steps: 45, Winner: error, AI: NA
+Idx: 49, White: 21, Black: 25, Draw: 0, Continue: 0, v1: 11, v0: 35, NA: 3, Error: 3
+
+Idx: 50, White AI: v0, Black AI: v1
+Idx: 50, Game Steps: 35, Winner: white, AI: v0
+Idx: 50, White: 22, Black: 25, Draw: 0, Continue: 0, v1: 11, v0: 36, NA: 3, Error: 3
+
+Idx: 51, White AI: v1, Black AI: v0
+Idx: 51, Game Steps: 18, Winner: black, AI: v0
+Idx: 51, White: 22, Black: 26, Draw: 0, Continue: 0, v1: 11, v0: 37, NA: 3, Error: 3
+
+Idx: 52, White AI: v0, Black AI: v1
+Idx: 52, Game Steps: 51, Winner: white, AI: v0
+Idx: 52, White: 23, Black: 26, Draw: 0, Continue: 0, v1: 11, v0: 38, NA: 3, Error: 3
+
+Idx: 53, White AI: v1, Black AI: v0
+Idx: 53, Game Steps: 24, Winner: black, AI: v0
+Idx: 53, White: 23, Black: 27, Draw: 0, Continue: 0, v1: 11, v0: 39, NA: 3, Error: 3
+
+Idx: 54, White AI: v0, Black AI: v1
+Idx: 54, Game Steps: 99, Winner: white, AI: v0
+Idx: 54, White: 24, Black: 27, Draw: 0, Continue: 0, v1: 11, v0: 40, NA: 3, Error: 3
+
+Idx: 55, White AI: v1, Black AI: v0
+Idx: 55, Game Steps: 66, Winner: black, AI: v0
+Idx: 55, White: 24, Black: 28, Draw: 0, Continue: 0, v1: 11, v0: 41, NA: 3, Error: 3
+
+Idx: 56, White AI: v0, Black AI: v1
+Idx: 56, Game Steps: 73, Winner: white, AI: v0
+Idx: 56, White: 25, Black: 28, Draw: 0, Continue: 0, v1: 11, v0: 42, NA: 3, Error: 3
+
+Idx: 57, White AI: v1, Black AI: v0
+Idx: 57, Game Steps: 105, Winner: white, AI: v1
+Idx: 57, White: 26, Black: 28, Draw: 0, Continue: 0, v1: 12, v0: 42, NA: 3, Error: 3
+
+Idx: 58, White AI: v0, Black AI: v1
+Idx: 58, Game Steps: 9, Winner: white, AI: v0
+Idx: 58, White: 27, Black: 28, Draw: 0, Continue: 0, v1: 12, v0: 43, NA: 3, Error: 3
+
+Idx: 59, White AI: v1, Black AI: v0
+Idx: 59, Game Steps: 12, Winner: black, AI: v0
+Idx: 59, White: 27, Black: 29, Draw: 0, Continue: 0, v1: 12, v0: 44, NA: 3, Error: 3
+
+Idx: 60, White AI: v0, Black AI: v1
+Idx: 60, Game Steps: 17, Winner: white, AI: v0
+Idx: 60, White: 28, Black: 29, Draw: 0, Continue: 0, v1: 12, v0: 45, NA: 3, Error: 3
+
+Idx: 61, White AI: v1, Black AI: v0
+Idx: 61, Game Steps: 206, Winner: black, AI: v0
+Idx: 61, White: 28, Black: 30, Draw: 0, Continue: 0, v1: 12, v0: 46, NA: 3, Error: 3
+
+Idx: 62, White AI: v0, Black AI: v1
+Idx: 62, Game Steps: 35, Winner: white, AI: v0
+Idx: 62, White: 29, Black: 30, Draw: 0, Continue: 0, v1: 12, v0: 47, NA: 3, Error: 3
+
+Idx: 63, White AI: v1, Black AI: v0
+Idx: 63, Game Steps: 48, Winner: black, AI: v0
+Idx: 63, White: 29, Black: 31, Draw: 0, Continue: 0, v1: 12, v0: 48, NA: 3, Error: 3
+
+Idx: 64, White AI: v0, Black AI: v1
+Idx: 64, Game Steps: 72, Winner: black, AI: v1
+Idx: 64, White: 29, Black: 32, Draw: 0, Continue: 0, v1: 13, v0: 48, NA: 3, Error: 3
+
+Idx: 65, White AI: v1, Black AI: v0
+Idx: 65, Game Steps: 14, Winner: black, AI: v0
+Idx: 65, White: 29, Black: 33, Draw: 0, Continue: 0, v1: 13, v0: 49, NA: 3, Error: 3
+
+Idx: 66, White AI: v0, Black AI: v1
+Idx: 66, Game Steps: 67, Winner: white, AI: v0
+Idx: 66, White: 30, Black: 33, Draw: 0, Continue: 0, v1: 13, v0: 50, NA: 3, Error: 3
+
+Idx: 67, White AI: v1, Black AI: v0
+Idx: 67, Game Steps: 98, Winner: black, AI: v0
+Idx: 67, White: 30, Black: 34, Draw: 0, Continue: 0, v1: 13, v0: 51, NA: 3, Error: 3
+
+Idx: 68, White AI: v0, Black AI: v1
+Idx: 68, Game Steps: 69, Winner: white, AI: v0
+Idx: 68, White: 31, Black: 34, Draw: 0, Continue: 0, v1: 13, v0: 52, NA: 3, Error: 3
+
+Idx: 69, White AI: v1, Black AI: v0
+Idx: 69, Game Steps: 50, Winner: black, AI: v0
+Idx: 69, White: 31, Black: 35, Draw: 0, Continue: 0, v1: 13, v0: 53, NA: 3, Error: 3
+
+Idx: 70, White AI: v0, Black AI: v1
+Idx: 70, Game Steps: 49, Winner: white, AI: v0
+Idx: 70, White: 32, Black: 35, Draw: 0, Continue: 0, v1: 13, v0: 54, NA: 3, Error: 3
+
+Idx: 71, White AI: v1, Black AI: v0
+Idx: 71, Game Steps: 25, Winner: white, AI: v1
+Idx: 71, White: 33, Black: 35, Draw: 0, Continue: 0, v1: 14, v0: 54, NA: 3, Error: 3
+
+Idx: 72, White AI: v0, Black AI: v1
+Idx: 72, Game Steps: 39, Winner: white, AI: v0
+Idx: 72, White: 34, Black: 35, Draw: 0, Continue: 0, v1: 14, v0: 55, NA: 3, Error: 3
+
+Idx: 73, White AI: v1, Black AI: v0
+Idx: 73, Game Steps: 64, Winner: black, AI: v0
+Idx: 73, White: 34, Black: 36, Draw: 0, Continue: 0, v1: 14, v0: 56, NA: 3, Error: 3
+
+Idx: 74, White AI: v0, Black AI: v1
+Idx: 74, Game Steps: 235, Winner: white, AI: v0
+Idx: 74, White: 35, Black: 36, Draw: 0, Continue: 0, v1: 14, v0: 57, NA: 3, Error: 3
+
+Idx: 75, White AI: v1, Black AI: v0
+Idx: 75, Game Steps: 18, Winner: black, AI: v0
+Idx: 75, White: 35, Black: 37, Draw: 0, Continue: 0, v1: 14, v0: 58, NA: 3, Error: 3
+
+Idx: 76, White AI: v0, Black AI: v1
+Idx: 76, Game Steps: 37, Winner: error, AI: NA
+Idx: 76, White: 35, Black: 37, Draw: 0, Continue: 0, v1: 14, v0: 58, NA: 4, Error: 4
+
+Idx: 77, White AI: v1, Black AI: v0
+Idx: 77, Game Steps: 66, Winner: black, AI: v0
+Idx: 77, White: 35, Black: 38, Draw: 0, Continue: 0, v1: 14, v0: 59, NA: 4, Error: 4
+
+Idx: 78, White AI: v0, Black AI: v1
+Idx: 78, Game Steps: 85, Winner: white, AI: v0
+Idx: 78, White: 36, Black: 38, Draw: 0, Continue: 0, v1: 14, v0: 60, NA: 4, Error: 4
+
+Idx: 79, White AI: v1, Black AI: v0
+Idx: 79, Game Steps: 26, Winner: black, AI: v0
+Idx: 79, White: 36, Black: 39, Draw: 0, Continue: 0, v1: 14, v0: 61, NA: 4, Error: 4
+
+Idx: 80, White AI: v0, Black AI: v1
+Idx: 80, Game Steps: 95, Winner: white, AI: v0
+Idx: 80, White: 37, Black: 39, Draw: 0, Continue: 0, v1: 14, v0: 62, NA: 4, Error: 4
+
+Idx: 81, White AI: v1, Black AI: v0
+Idx: 81, Game Steps: 40, Winner: black, AI: v0
+Idx: 81, White: 37, Black: 40, Draw: 0, Continue: 0, v1: 14, v0: 63, NA: 4, Error: 4
+
+Idx: 82, White AI: v0, Black AI: v1
+Idx: 82, Game Steps: 19, Winner: white, AI: v0
+Idx: 82, White: 38, Black: 40, Draw: 0, Continue: 0, v1: 14, v0: 64, NA: 4, Error: 4
+
+Idx: 83, White AI: v1, Black AI: v0
+Idx: 83, Game Steps: 32, Winner: black, AI: v0
+Idx: 83, White: 38, Black: 41, Draw: 0, Continue: 0, v1: 14, v0: 65, NA: 4, Error: 4
+
+Idx: 84, White AI: v0, Black AI: v1
+Idx: 84, Game Steps: 31, Winner: white, AI: v0
+Idx: 84, White: 39, Black: 41, Draw: 0, Continue: 0, v1: 14, v0: 66, NA: 4, Error: 4
+
+Idx: 85, White AI: v1, Black AI: v0
+Idx: 85, Game Steps: 99, Winner: white, AI: v1
+Idx: 85, White: 40, Black: 41, Draw: 0, Continue: 0, v1: 15, v0: 66, NA: 4, Error: 4
+
+Idx: 86, White AI: v0, Black AI: v1
+Idx: 86, Game Steps: 45, Winner: white, AI: v0
+Idx: 86, White: 41, Black: 41, Draw: 0, Continue: 0, v1: 15, v0: 67, NA: 4, Error: 4
+
+Idx: 87, White AI: v1, Black AI: v0
+Idx: 87, Game Steps: 114, Winner: black, AI: v0
+Idx: 87, White: 41, Black: 42, Draw: 0, Continue: 0, v1: 15, v0: 68, NA: 4, Error: 4
+
+Idx: 88, White AI: v0, Black AI: v1
+Idx: 88, Game Steps: 45, Winner: white, AI: v0
+Idx: 88, White: 42, Black: 42, Draw: 0, Continue: 0, v1: 15, v0: 69, NA: 4, Error: 4
+
+Idx: 89, White AI: v1, Black AI: v0
+Idx: 89, Game Steps: 30, Winner: black, AI: v0
+Idx: 89, White: 42, Black: 43, Draw: 0, Continue: 0, v1: 15, v0: 70, NA: 4, Error: 4
+
+Idx: 90, White AI: v0, Black AI: v1
+Idx: 90, Game Steps: 7, Winner: white, AI: v0
+Idx: 90, White: 43, Black: 43, Draw: 0, Continue: 0, v1: 15, v0: 71, NA: 4, Error: 4
+
+Idx: 91, White AI: v1, Black AI: v0
+Idx: 91, Game Steps: 33, Winner: white, AI: v1
+Idx: 91, White: 44, Black: 43, Draw: 0, Continue: 0, v1: 16, v0: 71, NA: 4, Error: 4
+
+Idx: 92, White AI: v0, Black AI: v1
+Idx: 92, Game Steps: 47, Winner: white, AI: v0
+Idx: 92, White: 45, Black: 43, Draw: 0, Continue: 0, v1: 16, v0: 72, NA: 4, Error: 4
+
+Idx: 93, White AI: v1, Black AI: v0
+Idx: 93, Game Steps: 70, Winner: black, AI: v0
+Idx: 93, White: 45, Black: 44, Draw: 0, Continue: 0, v1: 16, v0: 73, NA: 4, Error: 4
+
+Idx: 94, White AI: v0, Black AI: v1
+Idx: 94, Game Steps: 19, Winner: white, AI: v0
+Idx: 94, White: 46, Black: 44, Draw: 0, Continue: 0, v1: 16, v0: 74, NA: 4, Error: 4
+
+Idx: 95, White AI: v1, Black AI: v0
+Idx: 95, Game Steps: 59, Winner: white, AI: v1
+Idx: 95, White: 47, Black: 44, Draw: 0, Continue: 0, v1: 17, v0: 74, NA: 4, Error: 4
+
+Idx: 96, White AI: v0, Black AI: v1
+Idx: 96, Game Steps: 51, Winner: white, AI: v0
+Idx: 96, White: 48, Black: 44, Draw: 0, Continue: 0, v1: 17, v0: 75, NA: 4, Error: 4
+
+Idx: 97, White AI: v1, Black AI: v0
+Idx: 97, Game Steps: 67, Winner: draw, AI: NA
+Idx: 97, White: 48, Black: 44, Draw: 1, Continue: 0, v1: 17, v0: 75, NA: 5, Error: 4
+
+Idx: 98, White AI: v0, Black AI: v1
+Idx: 98, Game Steps: 29, Winner: white, AI: v0
+Idx: 98, White: 49, Black: 44, Draw: 1, Continue: 0, v1: 17, v0: 76, NA: 5, Error: 4
+
+Idx: 99, White AI: v1, Black AI: v0
+Idx: 99, Game Steps: 24, Winner: black, AI: v0
+Idx: 99, White: 49, Black: 45, Draw: 1, Continue: 0, v1: 17, v0: 77, NA: 5, Error: 4
+
+Idx: 100, White AI: v0, Black AI: v1
+Idx: 100, Game Steps: 13, Winner: white, AI: v0
+Idx: 100, White: 50, Black: 45, Draw: 1, Continue: 0, v1: 17, v0: 78, NA: 5, Error: 4
+

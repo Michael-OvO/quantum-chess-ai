@@ -1,0 +1,35 @@
+{
+  "total_games": 9,
+  "quantum_ai": {
+    "wins": 9,
+    "losses": 0,
+    "draws": 0,
+    "win_percentage": 100.0,
+    "total_moves": 199,
+    "quantum_moves": 20,
+    "classical_moves": 179,
+    "quantum_move_percentage": 10.050251256281408,
+    "avg_time_per_move": 24.59890435089418,
+    "total_time": 4895.181965827942,
+    "nodes_evaluated": 171611,
+    "pruning_count": 11196,
+    "tt_hits": 8182
+  },
+  "greedy_ai": {
+    "wins": 0,
+    "losses": 9,
+    "draws": 0,
+    "win_percentage": 0.0,
+    "total_moves": 195,
+    "quantum_moves": 74,
+    "classical_moves": 121,
+    "quantum_move_percentage": 37.94871794871795,
+    "avg_time_per_move": 0.014743164258125501,
+    "total_time": 2.8749170303344727
+  },
+  "comparative": {
+    "quantum_ai_over_greedy_win_ratio": 999.0,
+    "time_ratio": 1668.4955766762766,
+    "quantum_move_ratio": 0.2648377020236317
+  }
+}
