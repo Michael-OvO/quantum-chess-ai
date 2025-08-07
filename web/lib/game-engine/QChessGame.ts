@@ -334,9 +334,12 @@ export class QChessGame {
 
     const srcPiece = this.getPieceAt(srcPos.pos);
     if (!srcPiece) return 'invalid-no-piece';
-
+    
+    // Check if it's the correct player's turn
     const pieceColor = getColorFromPiece(srcPiece.piece);
-    if (pieceColor !== this.currentPlayer) return 'invalid-wrong-color';
+    if (pieceColor !== this.currentPlayer) {
+      return 'invalid-wrong-color';
+    }
 
     const pieceType = getPieceTypeFromChar(srcPiece.piece);
 
@@ -355,6 +358,18 @@ export class QChessGame {
         return this.isValidMoveKnight(srcPos, dstPos, srcSecondPos ?? undefined);
       default:
         return 'invalid-piece-movement';
+    }
+  }
+
+  /**
+   * Check if a move is valid without making it
+   */
+  isValidMove(from: string, to: string): boolean {
+    try {
+      const validation = this.validateMove(from, to);
+      return validation === 'valid';
+    } catch {
+      return false;
     }
   }
 

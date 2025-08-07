@@ -71,6 +71,8 @@ export const ChessBoard: React.FC<ChessBoardProps> = ({
         const from = squareToNotation(selectedSquare);
         const to = squareToNotation(square);
         
+        console.log(`Making move from ${from} to ${to}`);
+        
         try {
           game.makeMove(from, to);
           setLastMove({ from: selectedSquare, to: square });
@@ -96,6 +98,7 @@ export const ChessBoard: React.FC<ChessBoardProps> = ({
         if (piece) {
           setSelectedSquare(square);
           const moves = getValidMovesForSquare(game, square);
+          console.log(`Valid moves for ${squareToNotation(square)}:`, moves.map(m => squareToNotation(m)));
           setValidMoves(moves);
         } else {
           // Clear selection
@@ -109,6 +112,7 @@ export const ChessBoard: React.FC<ChessBoardProps> = ({
       if (piece) {
         setSelectedSquare(square);
         const moves = getValidMovesForSquare(game, square);
+        console.log(`Valid moves for ${squareToNotation(square)}:`, moves.map(m => squareToNotation(m)));
         setValidMoves(moves);
       }
     }
