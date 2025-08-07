@@ -1,0 +1,44 @@
+# Vercel Ignore File
+# These files and directories will be ignored during deployment
+
+# Test files
+__tests__/
+*.test.ts
+*.test.tsx
+jest.config.js
+jest.setup.js
+
+# Documentation
+doc/
+docs/
+*.md
+
+# Development files
+.husky/
+.prettierrc.json
+.eslintrc.json
+debug-sim.js
+examples/
+web-temp/
+
+# Git files
+.git/
+.gitignore
+
+# Environment files (except production)
+.env.local
+.env.local.example
+.env*.local
+
+# Mock files
+__mocks__/
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
+# IDE files
+.vscode/
+.idea/
+
+# macOS files
+.DS_Store
