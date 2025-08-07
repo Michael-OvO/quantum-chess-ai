@@ -1,13 +1,19 @@
 {
   "extends": ["next/core-web-vitals"],
   "rules": {
-    "no-console": ["warn", { "allow": ["warn", "error", "log"] }],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/explicit-function-return-type": ["error", {
+      "allowExpressions": true,
+      "allowTypedFunctionExpressions": true
+    }],
     "react/display-name": "off",
     "react-hooks/exhaustive-deps": "warn",
     "prefer-const": "error",
     "no-var": "error",
     "eqeqeq": ["error", "always"],
-    "curly": "off"
+    "curly": ["error", "all"]
   }
 }

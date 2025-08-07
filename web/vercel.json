@@ -1,0 +1,49 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
+  "functions": {
+    "app/api/game/[id]/stream/route.ts": {
+      "runtime": "edge",
+      "maxDuration": 300
+    },
+    "app/api/models/[id]/move/route.ts": {
+      "maxDuration": 30
+    },
+    "app/api/tournament/[id]/start/route.ts": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/:path*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-Requested-With, Content-Type, Authorization"
+        }
+      ]
+    }
+  ],
+  "env": {
+    "ENABLE_3D_BOARD": "true",
+    "ENABLE_TOURNAMENT_MODE": "true",
+    "ENABLE_DEBUG_MODE": "false"
+  }
+}
