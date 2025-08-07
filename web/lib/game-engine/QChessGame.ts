@@ -472,10 +472,10 @@ export class QChessGame {
    */
   getWhitePieces(): bigint {
     let whitePieces = BigInt(0);
-    const tagList = this.sim.getTagList();
+    const tagList = this.sim.pos2tag;
     
     tagList.forEach((tag, index) => {
-      if (tag && tag !== '.' && tag.toUpperCase() === tag) {
+      if (tag && tag !== '.' && tag !== null && tag.toUpperCase() === tag) {
         // Uppercase = white piece
         whitePieces |= (BigInt(1) << BigInt(index));
       }
@@ -489,16 +489,43 @@ export class QChessGame {
    */
   getBlackPieces(): bigint {
     let blackPieces = BigInt(0);
-    const tagList = this.sim.getTagList();
+    const tagList = this.sim.pos2tag;
     
     tagList.forEach((tag, index) => {
-      if (tag && tag !== '.' && tag.toLowerCase() === tag && tag !== '.') {
+      if (tag && tag !== '.' && tag !== null && tag.toLowerCase() === tag) {
         // Lowercase = black piece
         blackPieces |= (BigInt(1) << BigInt(index));
       }
     });
     
     return blackPieces;
+  }
+  
+  /**
+   * Check if the current player is in check
+   */
+  isCheck(): boolean {
+    // Simplified check detection - would need full implementation
+    // For now, return false to allow game to continue
+    return false;
+  }
+  
+  /**
+   * Check if the game is in checkmate
+   */
+  isCheckmate(): boolean {
+    // Simplified checkmate detection - would need full implementation
+    // Check if in check and no legal moves available
+    return false;
+  }
+  
+  /**
+   * Check if the game is in stalemate
+   */
+  isStalemate(): boolean {
+    // Simplified stalemate detection - would need full implementation
+    // Check if not in check but no legal moves available
+    return false;
   }
   
   /**

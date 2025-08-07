@@ -12,6 +12,7 @@ import { QChessGame } from '@/lib/game-engine';
 import { getGameStateStore } from '@/lib/game-state';
 import { generateSeed } from '@/lib/game-engine/utils';
 import { withRateLimit, rateLimiters } from '@/lib/api/rateLimiter';
+import type { SerializedGameState } from '@/types/game.types';
 
 // Request schema
 const CreateGameSchema = z.object({
@@ -56,29 +57,30 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const seed = data.seed || generateSeed();
     const game = new QChessGame(seed);
     
-    // Create game state
-    const gameState = {
-      id: gameId,
-      whitePieces: game.getWhitePieces(),
-      blackPieces: game.getBlackPieces(),
-      currentTurn: 'white' as const,
-      moveHistory: [],
-      capturedPieces: [],
-      gameStatus: 'active' as const,
-      players: {
-        white: data.playerWhite || 'Anonymous',
-        black: data.playerBlack || 'Anonymous'
+    // Create proper serialized game state
+    const gameState: SerializedGameState = {
+      metadata: {
+        id: gameId,
+        config: {
+          whitePlayer: data.playerWhite || 'Anonymous',
+          blackPlayer: data.playerBlack || 'Anonymous',
+          timeControl: data.timeControl,
+          enableQuantumRules: data.variant === 'quantum',
+          maxSuperpositions: 4,
+          measurementThreshold: 0.1,
+          seed
+        },
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        version: 1,
+        tags: []
       },
-      timeControl: data.timeControl || null,
-      variant: data.variant,
-      seed,
-      createdAt: new Date(),
-      updatedAt: new Date()
+      gameState: game.getGameState()
     };
     
     // Save to store
     const store = getGameStateStore();
-    await store.saveGame(gameId, gameState);
+    await store.save(gameState);
     
     // Return success response
     return NextResponse.json({
@@ -86,11 +88,14 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       gameId,
       game: {
         id: gameId,
-        players: gameState.players,
-        variant: gameState.variant,
-        status: gameState.gameStatus,
-        currentTurn: gameState.currentTurn,
-        createdAt: gameState.createdAt
+        players: {
+          white: gameState.metadata.config.whitePlayer,
+          black: gameState.metadata.config.blackPlayer
+        },
+        variant: data.variant,
+        status: gameState.gameState.status,
+        currentTurn: gameState.gameState.currentPlayer,
+        createdAt: gameState.metadata.createdAt
       }
     }, { status: 201 });
     

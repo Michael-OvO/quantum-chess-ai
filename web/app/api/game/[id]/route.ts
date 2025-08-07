@@ -53,18 +53,11 @@ export async function GET(
     return NextResponse.json({
       success: true,
       game: {
-        id: gameState.id,
-        whitePieces: gameState.whitePieces.toString(),
-        blackPieces: gameState.blackPieces.toString(),
-        currentTurn: gameState.currentTurn,
-        moveHistory: gameState.moveHistory,
-        capturedPieces: gameState.capturedPieces,
-        gameStatus: gameState.gameStatus,
-        players: gameState.players,
-        timeControl: gameState.timeControl,
-        variant: gameState.variant,
-        createdAt: gameState.createdAt,
-        updatedAt: gameState.updatedAt
+        id: gameState.metadata.id,
+        metadata: gameState.metadata,
+        gameState: gameState.gameState,
+        createdAt: gameState.metadata.createdAt,
+        updatedAt: gameState.metadata.updatedAt
       }
     });
     
@@ -107,7 +100,7 @@ export async function DELETE(
     
     // Delete game from store
     const store = getGameStateStore();
-    const success = await store.deleteGame(id);
+    const success = await store.delete(id);
     
     if (!success) {
       return NextResponse.json(
