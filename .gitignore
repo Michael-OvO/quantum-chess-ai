@@ -7,3 +7,4 @@ tbd00/
 build/
 *.ipynb
 .claude/
+/venv_alphago
