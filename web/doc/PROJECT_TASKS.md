@@ -265,6 +265,103 @@
 
 ---
 
+### Sprint 1.3: Complete Quantum Chess Mechanics
+
+#### T1.9: Implement Proper Capture Mechanics
+- **Priority**: 🔴 P0
+- **Status**: ⬜ Not Started
+- **Est. Hours**: 4
+- **Dependencies**: T1.5
+
+**Subtasks**:
+- [ ] Fix capture in quantum operations (QChessSparseSimulator)
+- [ ] Handle capture with measurement/collapse
+- [ ] Remove captured pieces from simulator correctly
+- [ ] Update piece probabilities after capture
+- [ ] Handle probabilistic quantum captures
+- [ ] Add comprehensive capture tests
+- [ ] Test edge cases (en passant, castling through capture)
+
+**Success Criteria**:
+- Captures trigger proper quantum state collapse
+- Captured pieces are removed from all quantum states
+- Probabilities update correctly after capture
+- All capture types work (normal, en passant, promotion)
+
+---
+
+#### T1.10: Add Split/Merge Move UI
+- **Priority**: 🔴 P0
+- **Status**: ⬜ Not Started
+- **Est. Hours**: 6
+- **Dependencies**: T1.7, T1.9
+
+**Subtasks**:
+- [ ] Create QuantumMoveSelector component
+- [ ] Add move mode toggle (normal/split/merge)
+- [ ] Implement multi-square selection UI
+- [ ] Add visual feedback for quantum move selection
+- [ ] Create helper functions for quantum moves
+- [ ] Add keyboard shortcuts for move modes
+- [ ] Update move history display for quantum notation
+
+**Success Criteria**:
+- Users can easily switch between move modes
+- Split moves allow selecting 2 sources and 2 destinations
+- Merge moves allow selecting 2 sources and 1 destination
+- Clear visual indicators for move type and selection
+- Intuitive user experience
+
+---
+
+#### T1.11: Connect Quantum State Visualization
+- **Priority**: 🔴 P0
+- **Status**: ⬜ Not Started
+- **Est. Hours**: 4
+- **Dependencies**: T1.7, T1.5
+
+**Subtasks**:
+- [ ] Get real probabilities from QChessSparseSimulator
+- [ ] Display probability percentages on pieces
+- [ ] Animate superposition states
+- [ ] Show entanglement connections between pieces
+- [ ] Update visualization after each move
+- [ ] Add quantum state inspector panel
+- [ ] Color-code pieces by probability
+
+**Success Criteria**:
+- Pieces show actual quantum probabilities
+- Superposition states are clearly visible
+- Entangled pieces show visual connection
+- Smooth animations for state changes
+- Users can understand quantum state at a glance
+
+---
+
+#### T1.12: Add Quantum Move Validation
+- **Priority**: 🔴 P0
+- **Status**: ⬜ Not Started
+- **Est. Hours**: 3
+- **Dependencies**: T1.5, T1.10
+
+**Subtasks**:
+- [ ] Validate split move requirements
+- [ ] Validate merge move requirements
+- [ ] Check quantum rule compliance
+- [ ] Add clear error messages
+- [ ] Prevent invalid quantum operations
+- [ ] Add tooltips explaining quantum rules
+- [ ] Test all validation scenarios
+
+**Success Criteria**:
+- Only valid quantum moves are allowed
+- Clear feedback for invalid move attempts
+- Helpful error messages guide users
+- All quantum chess rules enforced
+- Edge cases handled properly
+
+---
+
 ## 📅 Phase 2: Model Integration (Weeks 3-4)
 **Goal**: Integrate AI models and enable AI vs AI games
 

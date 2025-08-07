@@ -7,10 +7,12 @@
  */
 
 export { ChessBoard } from './ChessBoard';
+export { QuantumChessBoard } from './QuantumChessBoard';
 export { ChessSquare } from './ChessSquare';
 export { ChessPiece } from './ChessPiece';
 export { BoardNotation } from './BoardNotation';
 export { QuantumIndicator } from './QuantumIndicator';
+export { QuantumMoveSelector } from './QuantumMoveSelector';
 
 // Re-export types
 export type { Square, SquareNotation } from '@/lib/board/boardUtils';

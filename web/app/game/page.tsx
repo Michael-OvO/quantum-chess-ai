@@ -9,7 +9,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ChessBoard } from '@/components/board';
+import { QuantumChessBoard } from '@/components/board/QuantumChessBoard';
 import { QChessGame } from '@/lib/game-engine';
 
 export default function GamePage(): React.ReactElement {
@@ -24,9 +24,20 @@ export default function GamePage(): React.ReactElement {
     setGame(newGame);
   }, []);
   
-  // Handle move
-  const handleMove = (from: string, to: string): void => {
-    const moveNotation = `${from}-${to}`;
+  // Handle move (including quantum moves)
+  const handleMove = (from: string, to: string, fromSecond?: string, toSecond?: string): void => {
+    let moveNotation = '';
+    if (fromSecond && toSecond) {
+      // Split move
+      moveNotation = `${from} → ${to}+${toSecond}`;
+    } else if (fromSecond) {
+      // Merge move
+      moveNotation = `${from}+${fromSecond} → ${to}`;
+    } else {
+      // Normal move
+      moveNotation = `${from}-${to}`;
+    }
+    
     setMoveHistory(prev => [...prev, moveNotation]);
     setCurrentTurn(prev => prev === 'white' ? 'black' : 'white');
     
@@ -76,7 +87,7 @@ export default function GamePage(): React.ReactElement {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Chess Board */}
           <div className="lg:col-span-2 flex justify-center">
-            <ChessBoard
+            <QuantumChessBoard
               game={game}
               onMove={handleMove}
               showNotation

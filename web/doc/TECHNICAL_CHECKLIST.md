@@ -40,6 +40,65 @@
 
 ---
 
+## ♟️ Quantum Chess Mechanics Implementation
+
+### Core Quantum Features
+
+#### Capture Mechanics
+- [ ] Capture triggers quantum measurement
+- [ ] State collapse on capture
+- [ ] Probabilistic capture resolution
+- [ ] Remove piece from all quantum states
+- [ ] Update probabilities after capture
+- [ ] Handle en passant quantum capture
+- [ ] Handle castling through quantum pieces
+
+#### Split Move Interface
+- [ ] Move mode selector (normal/split/merge)
+- [ ] Multi-square selection (2 sources)
+- [ ] Multi-square destination (2 targets)
+- [ ] Visual feedback during selection
+- [ ] Validation before move execution
+- [ ] Keyboard shortcuts (S for split)
+- [ ] Clear selection indicators
+
+#### Merge Move Interface
+- [ ] Select two source pieces in superposition
+- [ ] Select single destination square
+- [ ] Validate pieces are entangled
+- [ ] Show merge probability preview
+- [ ] Execute quantum merge operation
+- [ ] Keyboard shortcuts (M for merge)
+- [ ] Visual merge animation
+
+#### Quantum State Visualization
+- [ ] Display piece probability percentages
+- [ ] Animate superposition states
+- [ ] Show entanglement connections
+- [ ] Color-code by probability strength
+- [ ] Update in real-time after moves
+- [ ] Quantum state inspector panel
+- [ ] Probability distribution graph
+
+#### Move Validation
+- [ ] Validate split move legality
+- [ ] Validate merge move requirements
+- [ ] Check quantum rule compliance
+- [ ] Prevent impossible quantum states
+- [ ] Clear error messages
+- [ ] Helpful tooltips
+- [ ] Edge case handling
+
+#### Move History & Notation
+- [ ] Quantum move notation (e2+e4 → d3+f3)
+- [ ] Display move probabilities
+- [ ] Show measurement results
+- [ ] Replay quantum games
+- [ ] Export quantum PGN
+- [ ] Move annotation for quantum effects
+
+---
+
 ## 🔌 API Endpoints Implementation
 
 ### Game Management APIs

@@ -226,7 +226,7 @@ export class QChessSparseSimulator {
   }
 
   /**
-   * Apply iSWAP operation
+   * Apply iSWAP operation with capture handling
    */
   applyISwap(
     src: number,
@@ -238,6 +238,51 @@ export class QChessSparseSimulator {
       throw new Error('Source and destination cannot be the same');
     }
 
+    const srcTag = this.pos2tag[src];
+    const dstTag = this.pos2tag[dst];
+    
+    // Check if this is a capture (different pieces at src and dst)
+    const isCapture = srcTag && dstTag && srcTag !== dstTag && 
+                     srcTag.toUpperCase() !== dstTag.toUpperCase();
+    
+    if (isCapture) {
+      // Capture triggers measurement at destination
+      const measureResult = this.measure(dst);
+      
+      if (measureResult === 1) {
+        // Piece exists at destination - capture it
+        // Remove the captured piece from all quantum states
+        this.pos2tag[dst] = null;
+        
+        // Now move the capturing piece
+        const moveCoeff: QuantumCoeff = {};
+        
+        for (const [basis, amplitude] of Object.entries(this.coeff)) {
+          // Only keep states where src has a piece
+          if (basis[src] === '1') {
+            const newBasis = basis.split('');
+            newBasis[src] = '0';
+            newBasis[dst] = '1';
+            moveCoeff[newBasis.join('')] = amplitude;
+          } else {
+            moveCoeff[basis] = amplitude;
+          }
+        }
+        
+        this.coeff = moveCoeff;
+        this.pos2tag[dst] = srcTag;
+        this.pos2tag[src] = null;
+      } else {
+        // No piece at destination after measurement - normal move
+        this.pos2tag[dst] = srcTag;
+        this.pos2tag[src] = null;
+      }
+      
+      this.cacheProb.clear();
+      return;
+    }
+
+    // Normal iSWAP operation (no capture)
     const newCoeff: QuantumCoeff = {};
 
     for (const [basis, amplitude] of Object.entries(this.coeff)) {
@@ -267,9 +312,12 @@ export class QChessSparseSimulator {
         newBasis[dst] = srcBit;
         const newBasisStr = newBasis.join('');
 
+        // Apply iSWAP phase factor (multiply by i)
+        const iAmplitude = ComplexMath.multiply(amplitude, ComplexMath.i());
+        
         newCoeff[newBasisStr] = ComplexMath.add(
           newCoeff[newBasisStr] || ComplexMath.zero(),
-          amplitude
+          iAmplitude
         );
       } else {
         newCoeff[basis] = amplitude;
@@ -279,7 +327,7 @@ export class QChessSparseSimulator {
     this.coeff = newCoeff;
     this.cacheProb.clear();
 
-    // Swap tags
+    // Swap tags for normal moves
     const temp = this.pos2tag[src];
     this.pos2tag[src] = this.pos2tag[dst];
     this.pos2tag[dst] = temp;
