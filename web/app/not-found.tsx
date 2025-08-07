@@ -15,7 +15,7 @@ export default function NotFound(): React.ReactElement {
         <h1 className="text-6xl font-bold mb-4">404</h1>
         <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
         <p className="text-gray-400 mb-8 max-w-md">
-          The page you're looking for doesn't exist or has been moved to a quantum superposition.
+          The page you&apos;re looking for doesn&apos;t exist or has been moved to a quantum superposition.
         </p>
         <div className="flex gap-4 justify-center">
           <Link

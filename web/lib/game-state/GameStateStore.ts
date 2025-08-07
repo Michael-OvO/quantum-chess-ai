@@ -260,7 +260,7 @@ export class GameStateStore implements IGameStateStore {
       }).filter(Boolean);
 
       // Apply filters
-      let filteredMetadata = metadataList.filter(item => {
+      const filteredMetadata = metadataList.filter(item => {
         if (!item) return false;
         
         const meta = item.metadata;
