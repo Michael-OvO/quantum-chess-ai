@@ -5,13 +5,7 @@ from .utils import (bitarray_to_int, hf_int_to_bitstr, get_rng, hf_swap_str_char
             QChessInvalidCommand, hf_convert_pos_to_int, ChessPosition, hf_str_none_to_position)
 
 _ZERO_EPS = 1e-12
-_DISCLAIMER = '''# Heads up!
-
-Hey there! Thanks for using this software. Just a friendly reminder that this is a free tool and it's provided 'as-is'. We've done our best to make it great, but it's not perfect. There might be a few bugs here and there.
-
-So, please don't rely on it for mission-critical tasks or anything where a software glitch could cause problems. And if you do find any bugs or issues, we'd love to hear about them so we can make the tool even better.
-
-Thanks and happy coding!'''
+_DISCLAIMER = ''
 _GLOBAL_CONFIG = {'print_disclaimer':False}
 
 class QChessSparseSimulator:
