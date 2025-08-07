@@ -9,7 +9,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { QChessGame } from '@/lib/game-engine';
-import { GameStateStore } from '@/lib/game-state';
+import { getGameStateStore } from '@/lib/game-state';
 import { generateSeed } from '@/lib/game-engine/utils';
 import { withRateLimit, rateLimiters } from '@/lib/api/rateLimiter';
 
@@ -77,7 +77,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     };
     
     // Save to store
-    const store = GameStateStore.getInstance();
+    const store = getGameStateStore();
     await store.saveGame(gameId, gameState);
     
     // Return success response

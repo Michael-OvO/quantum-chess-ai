@@ -468,6 +468,40 @@ export class QChessGame {
   }
 
   /**
+   * Get white pieces as BigInt bitboard
+   */
+  getWhitePieces(): bigint {
+    let whitePieces = BigInt(0);
+    const tagList = this.sim.getTagList();
+    
+    tagList.forEach((tag, index) => {
+      if (tag && tag !== '.' && tag.toUpperCase() === tag) {
+        // Uppercase = white piece
+        whitePieces |= (BigInt(1) << BigInt(index));
+      }
+    });
+    
+    return whitePieces;
+  }
+  
+  /**
+   * Get black pieces as BigInt bitboard
+   */
+  getBlackPieces(): bigint {
+    let blackPieces = BigInt(0);
+    const tagList = this.sim.getTagList();
+    
+    tagList.forEach((tag, index) => {
+      if (tag && tag !== '.' && tag.toLowerCase() === tag && tag !== '.') {
+        // Lowercase = black piece
+        blackPieces |= (BigInt(1) << BigInt(index));
+      }
+    });
+    
+    return blackPieces;
+  }
+  
+  /**
    * Get current game state
    */
   getGameState(): GameState {

@@ -9,7 +9,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { QChessGame } from '@/lib/game-engine';
-import { GameStateStore } from '@/lib/game-state';
+import { getGameStateStore } from '@/lib/game-state';
 import { BitString } from '@/lib/game-engine/BitString';
 
 // Request schema for move
@@ -65,8 +65,8 @@ export async function POST(
     const moveData = moveValidation.data;
     
     // Get game from store
-    const store = GameStateStore.getInstance();
-    const gameState = await store.getGame(id);
+    const store = getGameStateStore();
+    const gameState = await store.load(id);
     
     if (!gameState) {
       return NextResponse.json(

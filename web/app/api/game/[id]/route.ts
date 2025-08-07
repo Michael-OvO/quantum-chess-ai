@@ -8,7 +8,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { GameStateStore } from '@/lib/game-state';
+import { getGameStateStore } from '@/lib/game-state';
 
 // Path parameters schema
 const PathParamsSchema = z.object({
@@ -39,8 +39,8 @@ export async function GET(
     const { id } = validation.data;
     
     // Get game from store
-    const store = GameStateStore.getInstance();
-    const gameState = await store.getGame(id);
+    const store = getGameStateStore();
+    const gameState = await store.load(id);
     
     if (!gameState) {
       return NextResponse.json(
@@ -106,7 +106,7 @@ export async function DELETE(
     const { id } = validation.data;
     
     // Delete game from store
-    const store = GameStateStore.getInstance();
+    const store = getGameStateStore();
     const success = await store.deleteGame(id);
     
     if (!success) {
