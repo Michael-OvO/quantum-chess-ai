@@ -4,73 +4,108 @@
  * @author AI Agent
  * @date 2025-08-07
  * @task T1.7
+ * @refactor Using new simplified QuantumBoard
  */
 
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { QuantumChessBoard } from '@/components/board/QuantumChessBoard';
-import { QChessGame } from '@/lib/game-engine';
+import QuantumBoard from '@/components/board/QuantumBoard';
+import QuantumStatePanelCompact from '@/components/quantum/QuantumStatePanelCompact';
+import QuantumDrawer from '@/components/quantum/QuantumDrawer';
+import { QuantumPiece } from '@/lib/quantum/QuantumStateManager';
+
+interface MoveEvent {
+  type: 'normal' | 'split' | 'merge' | 'capture';
+  from: string[];
+  to: string[];
+  piece: string;
+  measured?: boolean;
+}
 
 export default function GamePage(): React.ReactElement {
-  const [game, setGame] = useState<QChessGame | null>(null);
   const [moveHistory, setMoveHistory] = useState<string[]>([]);
   const [currentTurn, setCurrentTurn] = useState<'white' | 'black'>('white');
   const [gameStatus, setGameStatus] = useState<string>('active');
+  const [quantumStates, setQuantumStates] = useState<Map<string, number>>(new Map());
+  const [quantumPieces, setQuantumPieces] = useState<QuantumPiece[]>([]);
+  const [measurementGroups, setMeasurementGroups] = useState<Map<string, Set<string>>>(new Map());
+  const [isQuantumDrawerOpen, setIsQuantumDrawerOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   
-  // Initialize game on mount
-  useEffect(() => {
-    const newGame = new QChessGame();
-    setGame(newGame);
-  }, []);
-  
-  // Handle move (including quantum moves)
-  const handleMove = (from: string, to: string, fromSecond?: string, toSecond?: string): void => {
+  // Handle move events from the board
+  const handleMove = (move: MoveEvent): void => {
     let moveNotation = '';
-    if (fromSecond && toSecond) {
-      // Split move
-      moveNotation = `${from} → ${to}+${toSecond}`;
-    } else if (fromSecond) {
-      // Merge move
-      moveNotation = `${from}+${fromSecond} → ${to}`;
-    } else {
-      // Normal move
-      moveNotation = `${from}-${to}`;
+    
+    switch (move.type) {
+      case 'normal':
+        moveNotation = `${move.from[0]} → ${move.to[0]}`;
+        break;
+      case 'split':
+        moveNotation = `${move.from[0]} ⟨${move.to[0]}|${move.to[1]}⟩`;
+        break;
+      case 'merge':
+        moveNotation = `⟨${move.from.join('|')}⟩ → ${move.to[0]}`;
+        break;
+      case 'capture':
+        moveNotation = `${move.from[0]} ✕ ${move.to[0]}`;
+        if (move.measured) {
+          moveNotation += ' (measured)';
+        }
+        break;
     }
     
     setMoveHistory(prev => [...prev, moveNotation]);
     setCurrentTurn(prev => prev === 'white' ? 'black' : 'white');
     
-    // Check game status
-    if (game) {
-      if (game.isCheckmate()) {
-        setGameStatus('checkmate');
-      } else if (game.isStalemate()) {
-        setGameStatus('stalemate');
-      } else if (game.isCheck()) {
-        setGameStatus('check');
-      } else {
-        setGameStatus('active');
-      }
+    // Update quantum states display
+    if (move.type === 'split') {
+      setQuantumStates(prev => {
+        const next = new Map(prev);
+        move.to.forEach(sq => next.set(sq, 0.5));
+        return next;
+      });
+    } else if (move.type === 'merge') {
+      setQuantumStates(prev => {
+        const next = new Map(prev);
+        move.from.forEach(sq => next.delete(sq));
+        return next;
+      });
     }
+  };
+  
+  // Handle quantum state changes from the board
+  const handleQuantumStateChange = (
+    pieces: QuantumPiece[], 
+    groups: Map<string, Set<string>>
+  ): void => {
+    setQuantumPieces(pieces);
+    setMeasurementGroups(groups);
   };
   
   // Reset game
   const resetGame = (): void => {
-    const newGame = new QChessGame();
-    setGame(newGame);
     setMoveHistory([]);
     setCurrentTurn('white');
     setGameStatus('active');
+    setQuantumStates(new Map());
+    setQuantumPieces([]);
+    setMeasurementGroups(new Map());
+    // The board will reset itself when remounted
+    window.location.reload();
   };
   
-  if (!game) {
-    return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-white text-xl">Loading game...</div>
-      </div>
-    );
-  }
+  // Check if mobile on mount and resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   return (
     <div className="min-h-screen bg-gray-900 text-white p-8">
@@ -87,18 +122,16 @@ export default function GamePage(): React.ReactElement {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Chess Board */}
           <div className="lg:col-span-2 flex justify-center">
-            <QuantumChessBoard
-              game={game}
+            <QuantumBoard
+              size={Math.min(640, typeof window !== 'undefined' ? window.innerWidth - 100 : 640)}
               onMove={handleMove}
-              showNotation
-              highlightLastMove
+              onQuantumStateChange={handleQuantumStateChange}
               allowMoves
-              boardSize={Math.min(640, typeof window !== 'undefined' ? window.innerWidth - 100 : 640)}
             />
           </div>
           
           {/* Game Info Panel */}
-          <div className="space-y-6">
+          <div className="space-y-6 lg:sticky lg:top-8 lg:max-h-[calc(100vh-4rem)] lg:overflow-y-auto">
             {/* Game Status */}
             <div className="bg-gray-800 rounded-lg p-6">
               <h2 className="text-xl font-semibold mb-4">Game Status</h2>
@@ -139,7 +172,7 @@ export default function GamePage(): React.ReactElement {
                   <p className="text-gray-500 text-sm">No moves yet</p>
                 ) : (
                   moveHistory.map((move, index) => (
-                    <div key={index} className="flex text-sm">
+                    <div key={`move-${index}`} className="flex text-sm">
                       <span className="text-gray-500 w-8">{Math.floor(index / 2) + 1}.</span>
                       <span className={index % 2 === 0 ? 'text-white' : 'text-gray-400'}>
                         {move}
@@ -149,6 +182,29 @@ export default function GamePage(): React.ReactElement {
                 )}
               </div>
             </div>
+            
+            {/* Quantum States Panel - Desktop */}
+            <div className="hidden lg:block">
+              <QuantumStatePanelCompact
+                pieces={quantumPieces}
+                measurementGroups={measurementGroups}
+              />
+            </div>
+            
+            {/* Mobile Quantum Button */}
+            {isMobile && quantumPieces.filter(p => p.positions.size > 1).length > 0 && (
+              <button
+                onClick={() => setIsQuantumDrawerOpen(true)}
+                className="lg:hidden w-full px-4 py-3 bg-quantum-600 hover:bg-quantum-700 
+                         text-white rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                <span className="text-xl">⚛️</span>
+                View Quantum States
+                <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
+                  {quantumPieces.filter(p => p.positions.size > 1).length}
+                </span>
+              </button>
+            )}
             
             {/* Controls */}
             <div className="bg-gray-800 rounded-lg p-6">
@@ -202,6 +258,14 @@ export default function GamePage(): React.ReactElement {
           </div>
         </div>
       </div>
+      
+      {/* Mobile Quantum Drawer */}
+      <QuantumDrawer
+        isOpen={isQuantumDrawerOpen}
+        onClose={() => setIsQuantumDrawerOpen(false)}
+        pieces={quantumPieces}
+        measurementGroups={measurementGroups}
+      />
     </div>
   );
 }
